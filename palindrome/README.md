@@ -4,5 +4,8 @@ Given a string, return true if the string is a palindrome or false if it is not.
 
 #### Examples
 
-`palindrome("abba") == true`
-`palindrome("abcdefg") == false`
+``` python
+palindrome("abba") # true
+
+palindrome("abcdefg") # false
+```
