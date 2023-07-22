@@ -10,9 +10,9 @@ class TestReverseInt(unittest.TestCase):
         self.assertEqual(actual, expected)
 
         # Input is positive.
-        input = 8365
+        input = 500
         actual = reverse_int(input)
-        expected = 5638
+        expected = 5
         self.assertEqual(actual, expected)
 
 if __name__ == "__main__":
