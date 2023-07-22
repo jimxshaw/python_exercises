@@ -1,6 +1,4 @@
 import unittest
-import sys
-from io import StringIO
 from reverse_string import reverse_string_reversed, reverse_string_slice, reverse_string_loop, reverse_string_reduce
 
 class TestReverseString(unittest.TestCase):
