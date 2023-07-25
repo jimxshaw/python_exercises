@@ -1,23 +1,20 @@
 import re
 
 def anagrams_one(first, second):
-  first_dict = {}
-  second_dict = {}
+  def build_char_dict(input):
+    char_dict = {}
+    cleaned = re.findall(r'[a-z]', input.lower())
+    
+    for char in cleaned:
+      if char in char_dict:
+        char_dict[char] += 1
+      else:
+        char_dict[char] = 1
+    
+    return char_dict
 
-  first_cleaned = re.findall(r'[a-z]', ''.join(first.lower()))
-  second_cleaned = re.findall(r'[a-z]', ''.join(second.lower()))
-
-  for char in first_cleaned:
-    if char in first_dict:
-      first_dict[char] += 1
-    else:
-      first_dict[char] = 1
-
-  for char in second_cleaned:
-    if char in second_dict:
-      second_dict[char] += 1
-    else:
-      second_dict[char] = 1
+  first_dict = build_char_dict(first)
+  second_dict = build_char_dict(second)
 
   if first_dict.keys() == second_dict.keys():
     for key in first_dict:
