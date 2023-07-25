@@ -4,8 +4,8 @@ def anagrams_one(first, second):
   first_dict = {}
   second_dict = {}
 
-  first_cleaned = re.findall(r'[a-z]', ''.join(sorted(first.lower())))
-  second_cleaned = re.findall(r'[a-z]', ''.join(sorted(second.lower())))
+  first_cleaned = re.findall(r'[a-z]', ''.join(first.lower()))
+  second_cleaned = re.findall(r'[a-z]', ''.join(second.lower()))
 
   for char in first_cleaned:
     if char in first_dict:
