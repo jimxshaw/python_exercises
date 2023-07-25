@@ -37,3 +37,9 @@ def anagrams_two(first, second):
   second_dict = clean_and_count(second)
 
   return first_dict == second_dict
+
+def anagrams_sort(first, second):
+  first_sorted = ''.join(sorted(re.sub(r'[^a-zA-Z]', '', first).lower()))
+  second_sorted = ''.join(sorted(re.sub(r'[^a-zA-Z]', '', second).lower()))
+
+  return first_sorted == second_sorted

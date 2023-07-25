@@ -1,5 +1,5 @@
 import unittest
-from anagrams import anagrams_one, anagrams_two
+from anagrams import anagrams_one, anagrams_two, anagrams_sort
 
 class TestAnagrams(unittest.TestCase):
   def test_anagram_one(self):
@@ -18,6 +18,15 @@ class TestAnagrams(unittest.TestCase):
 
     expected = False
     actual = anagrams_two('Hi there', 'Bye there')
+    self.assertFalse(expected, actual)
+
+  def test_anagram_sort(self):
+    expected = True
+    actual = anagrams_sort('RAIL! SAFETY!', 'fairy tales')
+    self.assertTrue(expected, actual)
+
+    expected = False
+    actual = anagrams_sort('Hi there', 'Bye there')
     self.assertFalse(expected, actual)
 
 if __name__ == "__main__":
