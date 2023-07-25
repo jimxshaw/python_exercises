@@ -16,13 +16,14 @@ def anagrams_one(first, second):
   first_dict = build_char_dict(first)
   second_dict = build_char_dict(second)
 
-  if first_dict.keys() == second_dict.keys():
-    for key in first_dict:
-      if first_dict[key] != second_dict[key]:
-        return False
-    return True
-  else:
+  if first_dict.keys() != second_dict.keys():
     return False
+
+  for key in first_dict:
+    if first_dict[key] != second_dict[key]:
+      return False
+  
+  return True
 
 def anagrams_two(first, second):
   def clean_and_count(input):
